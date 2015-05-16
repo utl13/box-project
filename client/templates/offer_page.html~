@@ -1,0 +1,9 @@
+<template name="offerPage">
+  <h2>{{title}}</h2>
+  <p>{{type}}</p>
+  <p>{{identCheck}}</p>
+  <p>{{maxTime}}</p>
+  <p>{{qrCode}}</p>
+  <p>{{keeper}}</p>
+  <p>by {{author}}</p>
+</template>

@@ -1,0 +1,4 @@
+<template name="newOffer">
+  <h1>Form for new Offer</h1>
+  {{> quickForm collection="Offers" id="submitOfferForm" type="method" meteormethod="submitOffer"}}
+</template>

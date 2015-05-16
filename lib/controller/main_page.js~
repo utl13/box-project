@@ -1,0 +1,18 @@
+if (Meteor.isClient) {
+
+MainPageController = BaseController.extend({
+  template: 'offersList',
+
+  findOptions: function() {
+    return { sort: {createdAt: -1}};
+  },
+
+  waitOn: function() {
+    return Meteor.subscribe('allOffers', this.findOptions());
+  },
+  data: function(){
+    return { offers: Offers.find({}, this.findOptions()) };
+  }
+});
+
+}

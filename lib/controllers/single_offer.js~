@@ -1,0 +1,14 @@
+if (Meteor.isClient)
+{
+	SinglePostController = BaseController.extend({
+	  template: 'offerPage',
+	  
+	  waitOn: function(){
+	    return Meteor.subscribe('singleOffer', this.params._id);
+	  },
+
+	  data: function() {
+	    return Offers.findOne(this.params._id);
+	  }
+	});
+}
