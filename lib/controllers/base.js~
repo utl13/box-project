@@ -1,6 +1,0 @@
-if (Meteor.isClient)
-{
-	BaseController = RouteController.extend({
-	  layoutTemplate: 'mainLayout'
-	});
-}
