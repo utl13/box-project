@@ -1,10 +1,5 @@
-<template name="MenuUser">
-  <div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-      <ul class="nav">
-        <li><a href="/create_offer">Create offer</a></li>
-	<li><a href="/reg_keeper">Register as keeper</a></li>
-      </ul>
-    </div>
-  </div>
+<template name="menuUser">
+	<li>{{#linkTo route='root'}}Home{{/linkTo}}</li>
+	<li>{{#linkTo route='newOffer'}}Add an offer{{/linkTo}}</li>
+	<li>{{#linkTo route='newKeeper'}}Add a keeper{{/linkTo}}</li>
 </template>

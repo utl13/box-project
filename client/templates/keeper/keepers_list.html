@@ -1,0 +1,12 @@
+<template name="keepersList">
+  <h3>View keepers</h3>
+  {{#each keepers}}
+    <hr>
+    <h3>
+    {{#linkTo route='singleKeeper'}}
+      {{title}}
+    {{/linkTo}}
+    </h3>
+    <hr>
+  {{/each}}
+</template>

@@ -2,11 +2,10 @@
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <a href="/">Box project</a>
+        <a href="/">Logo here</a>
       </div>
       <ul class="nav navbar-nav">
-        <li>{{#linkTo route='root'}}Home{{/linkTo}}</li>
-        <li>{{#linkTo route='newOffer'}}Add new offer{{/linkTo}}</li>
+        {{> menuUser}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
        {{> loginButtons}}
@@ -17,7 +16,7 @@
     <div class="row">
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
-        {{> yield}}
+	{{> yield}}
       </div>
       <div class="col-lg-2"></div>
     </div>

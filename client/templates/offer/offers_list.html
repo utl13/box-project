@@ -1,0 +1,12 @@
+<template name="offersList">
+  <h3>View offers</h3>
+  {{#each offers}}
+    <hr>
+    <h3>
+    {{#linkTo route='singleOffer'}}
+      {{title}}
+    {{/linkTo}}
+    </h3>
+    <hr>
+  {{/each}}
+</template>

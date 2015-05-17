@@ -49,7 +49,7 @@ accountsUIBootstrap3.setCustomSignupOptions = function() {
 }
 accountsUIBootstrap3.logoutCallback = function(error) {
   if(error) console.log("Error:" + error);
-  Router.go('home');
+  Router.go('indexPage');
 }
 Accounts.ui.config({
     forceEmailLowercase: true,

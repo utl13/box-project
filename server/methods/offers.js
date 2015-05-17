@@ -6,7 +6,6 @@ Meteor.methods({
       throw new Meteor.Error(401, 'You need to log in first!');
 
     var additionalParams = {
-      author: 'Author',
       createdAt: new Date(),
       userId: user._id
     }
