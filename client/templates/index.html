@@ -2,9 +2,9 @@
 <p>Welcome!</p>
 <p>View offers: {{#linkTo route="allOffers"}} offers{{/linkTo}}</p>
 <p>View keepers: {{#linkTo route="allKeepers"}} keepers{{/linkTo}}</p>
-<p> Search Items: {{> searchTpl}}</p>
+<p> Search Items: {{> search}}</p>
 </template>
-<template name="searchTpl">
+<template name="search">
     <div class="search-input">
         {{> esInput index="offers" placeholder="Search..." }}
     </div>
