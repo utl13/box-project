@@ -2,13 +2,25 @@
 <p>Welcome!</p>
 <p>View offers: {{#linkTo route="allOffers"}} offers{{/linkTo}}</p>
 <p>View keepers: {{#linkTo route="allKeepers"}} keepers{{/linkTo}}</p>
-<p> Search Item: {{> searchBox}}</p>
+<p> Search Items: {{> searchTpl}}</p>
 </template>
-<template name="searchBox">
-    {{> esInput index="offers" placeholder="Search..." }}
-    <ul>
-        {{#esEach index="offers"}}
-            <li>Name of the player: {{title}}</li>
-        {{/esEach}}
-    </ul>
+<template name="searchTpl">
+    <div class="search-input">
+        {{> esInput index="offers" placeholder="Search..." }}
+    </div>
+    {{#ifEsIsSearching index="offers"}}
+        <div>Loading...</div>
+    {{else}}
+        <div class="results-wrapper">
+            {{#esEach index="offers"}}
+                {{title}}
+            {{/esEach}}
+        </div>
+
+        {{> esLoadMoreButton index="offers"}}
+    {{/ifEsIsSearching}}
+
+    {{#ifEsHasNoResults index="offers"}}
+        <div class="no-results">No results found!</div>
+    {{/ifEsHasNoResults}}
 </template>
