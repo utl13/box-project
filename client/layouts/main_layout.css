@@ -1,0 +1,7 @@
+#wrap{
+width: 1200px;
+margin: auto;
+min-height: 100vh;
+  background: white;
+  box-shadow: 0px 0px 20px 15px #CCC8C8;
+}

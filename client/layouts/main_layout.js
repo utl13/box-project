@@ -55,6 +55,7 @@ Accounts.ui.config({
     forceEmailLowercase: true,
     forceUsernameLowercase: true,
 });
+
 }
 
 if (Meteor.isServer) {

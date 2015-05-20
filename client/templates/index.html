@@ -2,4 +2,13 @@
 <p>Welcome!</p>
 <p>View offers: {{#linkTo route="allOffers"}} offers{{/linkTo}}</p>
 <p>View keepers: {{#linkTo route="allKeepers"}} keepers{{/linkTo}}</p>
+<p> Search Item: {{> searchBox}}</p>
+</template>
+<template name="searchBox">
+    {{> esInput index="offers" placeholder="Search..." }}
+    <ul>
+        {{#esEach index="offers"}}
+            <li>Name of the player: {{title}}</li>
+        {{/esEach}}
+    </ul>
 </template>
